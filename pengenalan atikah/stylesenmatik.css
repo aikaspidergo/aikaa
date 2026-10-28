@@ -1,0 +1,505 @@
+/* =================================
+   RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =================================
+   HTML & BODY
+================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    min-height: 100vh;
+
+    /* BACKGROUND SCRAPBOOK */
+    background-image: url("background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* =================================
+   HALAMAN PERTAMA / OPENING
+================================= */
+
+.opening {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+    text-align: center;
+
+    background-image: url("lataraika.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.opening-content {
+    max-width: 650px;
+    padding: 40px;
+
+    background-color: rgba(255, 255, 255, 0.82);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.small-text {
+    color: #ec4899;
+
+    font-weight: bold;
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.opening h1 {
+    font-size: 50px;
+
+    color: #831843;
+
+    margin-bottom: 20px;
+}
+
+.opening-content p:not(.small-text) {
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* =================================
+   TOMBOL OPENING
+================================= */
+
+.start-button {
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    background-color: #ec4899;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.start-button:hover {
+    background-color: #be185d;
+
+    transform: translateY(-3px);
+}
+
+
+/* =================================
+   NAVBAR HALAMAN KEDUA
+================================= */
+
+.navbar {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+
+    background-color: rgba(255, 255, 255, 0.92);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 3px 15px rgba(236, 72, 153, 0.15);
+
+    backdrop-filter: blur(8px);
+}
+
+.navbar h2 {
+    color: #ec4899;
+
+    font-size: 25px;
+}
+
+.navbar ul {
+    display: flex;
+
+    gap: 30px;
+
+    list-style: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+
+    color: #333;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ec4899;
+}
+
+
+/* =================================
+   HERO HALAMAN KEDUA
+================================= */
+
+.hero {
+    min-height: 90vh;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 70px 8%;
+
+    /* MEMBUAT SCRAPBOOK TERLIHAT */
+    background: transparent;
+
+    gap: 50px;
+}
+
+.hero-text {
+    max-width: 550px;
+
+    padding: 30px;
+
+    /* KOTAK TRANSPARAN UNTUK TEKS */
+    background: rgba(255, 255, 255, 0.82);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 8px 25px rgba(131, 24, 67, 0.12);
+}
+
+.welcome-text {
+    color: #ec4899;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.hero-text h1 {
+    font-size: 50px;
+
+    color: #831843;
+
+    margin: 15px 0;
+}
+
+.hero-text p {
+    line-height: 1.7;
+
+    font-size: 17px;
+}
+
+
+/* =================================
+   FOTO AIKA
+================================= */
+
+.hero-image img {
+    width: 300px;
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 8px solid white;
+
+    box-shadow:
+        0 10px 35px rgba(236, 72, 153, 0.25);
+
+    transition: 0.3s;
+}
+
+.hero-image img:hover {
+    transform: scale(1.05);
+}
+
+
+/* =================================
+   TOMBOL HALAMAN KEDUA
+================================= */
+
+.button {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 13px 28px;
+
+    background-color: #ec4899;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #be185d;
+
+    transform: translateY(-3px);
+}
+
+
+/* =================================
+   SECTION TENTANG & HOBI
+================================= */
+
+.section {
+    padding: 90px 8%;
+
+    text-align: center;
+
+    /* TRANSPARAN AGAR BACKGROUND TERLIHAT */
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.section h2 {
+    color: #ec4899;
+
+    font-size: 35px;
+
+    margin-bottom: 25px;
+}
+
+.section p {
+    max-width: 700px;
+
+    margin: 10px auto;
+
+    line-height: 1.8;
+
+    font-size: 16px;
+}
+
+
+/* =================================
+   CARD HOBI
+================================= */
+
+.cards {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-top: 45px;
+
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 280px;
+
+    padding: 30px;
+
+    background-color: rgba(255, 255, 255, 0.90);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 5px 20px rgba(236, 72, 153, 0.12);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 12px 25px rgba(236, 72, 153, 0.20);
+}
+
+.card h3 {
+    color: #ec4899;
+
+    margin-bottom: 15px;
+
+    font-size: 20px;
+}
+
+.card p {
+    font-size: 15px;
+}
+
+
+/* =================================
+   KONTAK
+================================= */
+
+.contact {
+    background-color: rgba(255, 228, 236, 0.78);
+
+    backdrop-filter: blur(3px);
+}
+
+.contact p {
+    margin: 12px auto;
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+    padding: 25px;
+
+    text-align: center;
+
+    background-color: rgba(131, 24, 67, 0.95);
+
+    color: white;
+}
+
+
+/* =================================
+   TAMBAHAN DEKORASI
+================================= */
+
+.section h2::after {
+    content: " ♡";
+
+    color: #ec4899;
+}
+
+
+/* =================================
+   RESPONSIVE / HP
+================================= */
+
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 18px 5%;
+    }
+
+    .navbar ul {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        flex-direction: column-reverse;
+
+        text-align: center;
+
+        gap: 40px;
+
+        padding-top: 60px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero-text {
+        padding: 25px;
+    }
+
+    .hero-text h1 {
+        font-size: 35px;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+    }
+
+
+    /* FOTO */
+
+    .hero-image img {
+        width: 230px;
+
+        height: 230px;
+    }
+
+
+    /* CARD */
+
+    .cards {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+
+        max-width: 350px;
+    }
+
+
+    /* OPENING */
+
+    .opening {
+        padding: 20px;
+    }
+
+    .opening-content {
+        padding: 30px 20px;
+    }
+
+    .opening h1 {
+        font-size: 35px;
+    }
+
+    .opening-content p:not(.small-text) {
+        font-size: 16px;
+    }
+}

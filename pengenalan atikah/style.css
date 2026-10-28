@@ -1,0 +1,480 @@
+/* =================================
+   RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =================================
+   BODY
+================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #fff5f8;
+}
+
+
+/* =================================
+   HALAMAN PERTAMA
+================================= */
+
+.opening {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background-image: url("lataraika.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.opening-content {
+    max-width: 650px;
+
+    padding: 40px;
+
+    background-color: rgba(255, 255, 255, 0.78);
+
+    border-radius: 25px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+.small-text {
+    color: #ec4899;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+
+.opening h1 {
+    font-size: 50px;
+
+    color: #831843;
+
+    margin-bottom: 20px;
+}
+
+
+.opening-content p:not(.small-text) {
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* Tombol halaman pertama */
+
+.start-button {
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    background-color: #ec4899;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.start-button:hover {
+    background-color: #be185d;
+
+    transform: translateY(-3px);
+}
+
+
+
+/* =================================
+   NAVBAR HALAMAN KEDUA
+================================= */
+
+.navbar {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px 8%;
+
+    background-color: white;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow: 0 3px 15px rgba(236, 72, 153, 0.15);
+}
+
+
+.navbar h2 {
+    color: #ec4899;
+
+    font-size: 25px;
+}
+
+
+.navbar ul {
+    display: flex;
+
+    gap: 30px;
+
+    list-style: none;
+}
+
+
+.navbar ul li a {
+    text-decoration: none;
+
+    color: #333;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.navbar ul li a:hover {
+    color: #ec4899;
+}
+
+
+
+/* =================================
+   HERO HALAMAN KEDUA
+================================= */
+
+.hero {
+    min-height: 90vh;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 70px 8%;
+
+    background: linear-gradient(
+        135deg,
+        #ffe4ec,
+        #fff0f5,
+        #ffffff
+    );
+}
+
+
+.hero-text {
+    max-width: 550px;
+}
+
+
+.welcome-text {
+    color: #ec4899;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.hero-text h1 {
+    font-size: 50px;
+
+    color: #831843;
+
+    margin: 15px 0;
+}
+
+
+.hero-text p {
+    line-height: 1.7;
+
+    font-size: 17px;
+}
+
+
+/* =================================
+   FOTO AIKA
+================================= */
+
+.hero-image img {
+    width: 300px;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 8px solid white;
+
+    box-shadow:
+        0 10px 35px rgba(236, 72, 153, 0.25);
+}
+
+
+
+/* =================================
+   TOMBOL HALAMAN KEDUA
+================================= */
+
+.button {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 13px 28px;
+
+    background-color: #ec4899;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.button:hover {
+    background-color: #be185d;
+
+    transform: translateY(-3px);
+}
+
+
+
+/* =================================
+   SECTION TENTANG & HOBI
+================================= */
+
+.section {
+    padding: 90px 8%;
+
+    text-align: center;
+}
+
+
+.section h2 {
+    color: #ec4899;
+
+    font-size: 35px;
+
+    margin-bottom: 25px;
+}
+
+
+.section p {
+    max-width: 700px;
+
+    margin: 10px auto;
+
+    line-height: 1.8;
+
+    font-size: 16px;
+}
+
+
+
+/* =================================
+   CARD HOBI
+================================= */
+
+.cards {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-top: 45px;
+}
+
+
+.card {
+    width: 280px;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 5px 20px rgba(236, 72, 153, 0.12);
+
+    transition: 0.3s;
+}
+
+
+.card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 12px 25px rgba(236, 72, 153, 0.20);
+}
+
+
+.card h3 {
+    color: #ec4899;
+
+    margin-bottom: 15px;
+
+    font-size: 20px;
+}
+
+
+.card p {
+    font-size: 15px;
+}
+
+
+
+/* =================================
+   KONTAK
+================================= */
+
+.contact {
+    background-color: #ffe4ec;
+}
+
+
+.contact p {
+    margin: 12px auto;
+}
+
+
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+    padding: 25px;
+
+    text-align: center;
+
+    background-color: #831843;
+
+    color: white;
+}
+
+
+
+/* =================================
+   RESPONSIVE / HP
+================================= */
+
+@media (max-width: 768px) {
+
+    /* Navbar */
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .navbar ul {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        flex-direction: column-reverse;
+
+        text-align: center;
+
+        gap: 40px;
+
+        padding-top: 60px;
+    }
+
+
+    .hero-text h1 {
+        font-size: 35px;
+    }
+
+
+    .hero-image img {
+        width: 230px;
+
+        height: 230px;
+    }
+
+
+    /* Card */
+
+    .cards {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .card {
+        width: 90%;
+
+        max-width: 350px;
+    }
+
+
+    /* Opening */
+
+    .opening-content {
+        padding: 30px 20px;
+    }
+
+
+    .opening h1 {
+        font-size: 35px;
+    }
+
+}

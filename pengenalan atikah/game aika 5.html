@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Aika Game - 2 Game</title>
+  <link rel="stylesheet" href="stylegame.css">
+</head>
+<body>
+
+<!-- INTRO -->
+<div id="intro">
+  <video autoplay muted loop id="bgVideo">
+    <source src="imut.mp4" type="video/mp4">
+  </video>
+  <div class="intro-content">
+    <button onclick="showNameInput()">▶ START GAME</button>
+  </div>
+</div>
+
+<!-- NAME SCREEN dengan VIDEO BACKGROUND -->
+<div id="nameScreen">
+  <video autoplay muted loop id="nameBgVideo">
+    <source src="atikahpink.mp4" type="video/mp4">
+  </video>
+  <div class="overlay"></div>
+  
+  <!-- KUCING HALO -->
+  <div class="cat-greeting">
+    <span class="bunny-emoji">🐰</span>
+    <span class="bunny-talk">Halo im aika 👋</span>
+  </div>
+  
+  <div class="box">
+    <h2>your name</h2>
+    <input type="text" id="playerNameInput" placeholder="Nama panggilan..." autocomplete="off">
+    <br>
+    <button onclick="startGameWithName()">NEXT</button>
+  </div>
+</div>
+
+<!-- MENU PILIH GAME -->
+<div id="gameMenu">
+  <video autoplay muted loop id="menuBgVideo">
+    <source src="PILIH MENU.mp4" type="video/mp4">
+  </video>
+  <div class="menu-overlay"></div>
+  
+  <div class="menu-container">
+    <h1> </h1>
+    <div class="menu-buttons">
+      <button class="menu-btn box-btn" onclick="startBoxGame()">
+        <span class="menu-icon">📦</span>
+        <span class="menu-title">GAME KOTAK</span>
+        <span class="menu-desc">Kumpulkan 6 item emas<br>Hindari musuh merah!</span>
+      </button>
+      <button class="menu-btn maze-btn" onclick="startMazeGame()">
+        <span class="menu-icon">🧭</span>
+        <span class="menu-title">GAME LABIRIN</span>
+        <span class="menu-desc">Cari bendera di labirin<br>Jangan tersesat!</span>
+      </button>
+      <button class="menu-btn quiz-btn" onclick="startQuizGame()">
+        <span class="menu-icon">❓</span>
+        <span class="menu-title">KUIS AIKA</span>
+        <span class="menu-desc">Tebak fakta tentang Aika!<br>Jawab pertanyaan dengan benar</span>
+      </button>
+      <button class="menu-btn jump-btn" onclick="startJumpGame()">
+         <span class="menu-icon">🦘</span>
+         <span class="menu-title">GAME LOMPAT</span>
+         <span class="menu-desc">Hindari rintangan!<br>Lompat setinggi mungkin</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- GAME ELEMENTS -->
+<video autoplay muted loop id="gameVideo">
+  <source src="aik.mp4" type="video/mp4">
+</video>
+
+<canvas id="gameCanvas"></canvas>
+
+<audio id="bgm" loop>
+  <source src="atikah.mp3" type="audio/mpeg">
+</audio>
+
+<div id="hud">
+  <span id="scoreText">🎯 Score: 0</span>
+  <span id="lifeText">❤️ ❤️ ❤️</span>
+  <button id="muteBtn" class="mute-button">🔊</button>
+</div>
+
+<div id="hitFlash"></div>
+
+<div id="gameOver">
+  <h1>💀 GAME OVER 💀</h1>
+  <p id="finalScore"></p>
+  <button onclick="restartGame()">🔄 RESTART GAME</button>
+</div>
+
+<div id="messageScreen">
+  <h1 id="winText">🎉 SELAMAT! 🎉</h1>
+  <button onclick="restartGame()">MAIN LAGI</button>
+</div>
+
+<script src="scriptgame.js"></script>
+</body>
+</html>

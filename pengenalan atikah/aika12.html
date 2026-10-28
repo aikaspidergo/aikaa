@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RetroLens — Hand Tracking Portal</title>
+
+    <link rel="stylesheet" href="style12.css">
+
+    <!-- MediaPipe Hands -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+</head>
+
+<body>
+
+    <!-- BACKGROUND -->
+    <div class="bg-grid"></div>
+    <div class="noise"></div>
+
+    <!-- HEADER -->
+    <header class="topbar">
+
+        <div class="brand">
+            <div class="brand-icon">✦</div>
+
+            <div>
+                <h1>RETROLENS</h1>
+                <span>HAND TRACKING PORTAL</span>
+            </div>
+        </div>
+
+        <div class="status-area">
+
+            <div class="status">
+                <span id="statusDot"></span>
+                <span id="statusText">CAMERA OFFLINE</span>
+            </div>
+
+            <div class="fps">
+                <span>FPS</span>
+                <strong id="fpsValue">--</strong>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="main-container">
+
+        <!-- CAMERA -->
+        <section class="camera-section">
+
+            <div class="camera-frame">
+
+                <video
+                    id="video"
+                    autoplay
+                    playsinline
+                    muted>
+                </video>
+
+                <canvas id="canvas"></canvas>
+
+                <!-- SCANLINES -->
+                <div class="scanlines"></div>
+
+                <!-- CORNERS -->
+                <div class="corner tl"></div>
+                <div class="corner tr"></div>
+                <div class="corner bl"></div>
+                <div class="corner br"></div>
+
+                <!-- CENTER MESSAGE -->
+                <div id="welcome" class="welcome">
+
+                    <div class="welcome-icon">🖐️</div>
+
+                    <h2>RETROLENS</h2>
+
+                    <p>
+                        Open the portal with<br>
+                        <strong>two hands</strong>
+                    </p>
+
+                    <button id="startButton">
+                        START CAMERA
+                    </button>
+
+                </div>
+
+                <!-- CAMERA INFO -->
+                <div class="camera-info">
+
+                    <span>
+                        <i></i>
+                        LIVE
+                    </span>
+
+                    <span id="handCount">
+                        HANDS: 0
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SIDE PANEL -->
+        <aside class="control-panel">
+
+            <!-- PORTAL STATUS -->
+            <div class="panel-card">
+
+                <div class="panel-title">
+                    <span>PORTAL STATUS</span>
+                    <span class="mini-dot"></span>
+                </div>
+
+                <div id="portalStatus" class="portal-status">
+                    WAITING
+                </div>
+
+                <div class="portal-description" id="portalDescription">
+                    Bentangkan kedua tangan untuk membuka portal.
+                </div>
+
+            </div>
+
+
+            <!-- CURRENT FILTER -->
+            <div class="panel-card">
+
+                <div class="panel-title">
+                    <span>ACTIVE FILTER</span>
+                </div>
+
+                <div class="filter-display">
+
+                    <span class="filter-number" id="filterNumber">
+                        01
+                    </span>
+
+                    <div>
+                        <h2 id="filterName">
+                            DUAL-TONE
+                        </h2>
+
+                        <p id="secondaryFilter">
+                            NEXT: THERMAL
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FILTER BUTTONS -->
+            <div class="panel-card">
+
+                <div class="panel-title">
+                    <span>FILTERS</span>
+                </div>
+
+                <div id="filterButtons" class="filter-buttons"></div>
+
+            </div>
+
+
+            <!-- CONTROLS -->
+            <div class="panel-card">
+
+                <div class="panel-title">
+                    <span>CONTROLS</span>
+                </div>
+
+                <div class="controls">
+
+                    <div class="control-item">
+                        <kbd>N</kbd>
+                        <span>Next Filter</span>
+                    </div>
+
+                    <div class="control-item">
+                        <kbd>P</kbd>
+                        <span>Previous Filter</span>
+                    </div>
+
+                    <div class="control-item">
+                        <kbd>C</kbd>
+                        <span>Toggle 2D / 3D</span>
+                    </div>
+
+                    <div class="control-item">
+                        <kbd>S</kbd>
+                        <span>Screenshot</span>
+                    </div>
+
+                    <div class="control-item">
+                        <kbd>Q</kbd>
+                        <span>Stop Camera</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- MODE -->
+            <div class="panel-card mode-card">
+
+                <div class="panel-title">
+                    <span>RENDER MODE</span>
+                </div>
+
+                <div class="mode-switch">
+
+                    <button
+                        id="mode2D"
+                        class="mode active">
+                        2D
+                    </button>
+
+                    <button
+                        id="mode3D"
+                        class="mode">
+                        3D
+                    </button>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div>
+            RETROLENS WEB EDITION
+        </div>
+
+        <div>
+            MEDIAPIPE • OPENCV INSPIRED
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
